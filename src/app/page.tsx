@@ -63,6 +63,7 @@ export default function QuizApp() {
             <div className="flex flex-row gap-14">
               {questions[currentQuestion].options.map((option, index) => (
                 <button 
+                  key={`option-${currentQuestion}-${index}`}
                   className="p-2 bg-blue-400 text-white rounded-md" 
                   onClick={() => handleAnswer(option)}
                 >
